@@ -9,19 +9,22 @@
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.MyApplication">
 
-        <activity android:name=".LoginActivity"
-            android:exported="true">  <!-- Launcher activity must be exported -->
+        <activity android:name=".SplashScreenActivity"
+            android:exported="true">  <!-- Set as launcher activity -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
+        <activity android:name=".LoginActivity"
+            android:exported="true" />  <!-- Can be exported for navigation -->
+
         <activity android:name=".SignupActivity"
-            android:exported="false" /> <!-- Non-launcher activities can have false -->
+            android:exported="false" />  <!-- Non-launcher activity -->
 
         <activity android:name=".MainActivity"
-            android:exported="false" />
-    </application>
+            android:exported="false" />  <!-- Non-launcher activity -->
 
+    </application>
 </manifest>
