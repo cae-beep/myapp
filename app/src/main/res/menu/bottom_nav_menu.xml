@@ -1,14 +1,22 @@
+<!-- res/menu/bottom_nav_menu.xml -->
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/nav_home"
+        android:id="@+id/navigation_home"
         android:icon="@drawable/ic_home"
-        android:title="@string/home" />
+        android:title="Home" />
+
     <item
-        android:id="@+id/nav_add"
+        android:id="@+id/navigation_add"
         android:icon="@drawable/ic_add"
-        android:title="@string/add" />
+        android:title="Add" />
+
     <item
-        android:id="@+id/nav_user"
+        android:id="@+id/navigation_history"
+        android:icon="@drawable/icon_history"
+        android:title="History" />
+
+    <item
+        android:id="@+id/navigation_user"
         android:icon="@drawable/ic_user"
-        android:title="@string/user" />
+        android:title="User" />
 </menu>

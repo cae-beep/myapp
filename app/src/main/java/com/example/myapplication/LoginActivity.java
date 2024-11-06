@@ -38,6 +38,7 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                         // Redirect to MainActivity where the bottom navigation bar is displayed
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        intent.putExtra("username", user); // Pass the username to MainActivity
                         startActivity(intent);
                         finish();  // Prevent going back to login screen
                     } else {
@@ -54,5 +55,7 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
     }
 }

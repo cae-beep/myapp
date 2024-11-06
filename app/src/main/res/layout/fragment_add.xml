@@ -1,12 +1,151 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
+    android:padding="16dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="24sp" />
-</LinearLayout>
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Transaction"
+            android:textSize="24sp"
+            android:layout_gravity="center"
+            android:paddingBottom="16dp"
+            android:textStyle="bold"/>
+
+        <!-- Transaction Type Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/button_cash_in"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="?attr/colorPrimary"
+                android:textColor="@android:color/white"
+                android:text="Cash In"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/button_cash_out"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="?attr/colorAccent"
+                android:textColor="@android:color/white"
+                android:text="Cash Out"/>
+        </LinearLayout>
+
+        <!-- Amount Input -->
+        <EditText
+            android:id="@+id/editText_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Amount"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="16dp"
+            android:padding="12dp"
+            android:background="@drawable/rounded_edittext_background"/>
+
+        <!-- Category Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroup_categories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp">
+
+            <RadioButton
+                android:id="@+id/radio_salary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Salary" />
+
+            <RadioButton
+                android:id="@+id/radio_investments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Investments" />
+
+            <RadioButton
+                android:id="@+id/radio_parttime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Part-time" />
+
+            <RadioButton
+                android:id="@+id/radio_bonus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bonus" />
+
+            <RadioButton
+                android:id="@+id/radio_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tips" />
+
+            <RadioButton
+                android:id="@+id/radio_others"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Others" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/editText_other_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Specify Other Category"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"
+            android:padding="12dp"
+            android:background="@drawable/rounded_edittext_background"/>
+
+        <!-- Photo Upload Section -->
+        <Button
+            android:id="@+id/button_upload_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Photo"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="?attr/colorPrimary"
+            android:textColor="@android:color/white"/>
+
+        <ImageView
+            android:id="@+id/imageView_photo"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            android:scaleType="centerCrop"
+            android:background="@drawable/photo_background_placeholder"/>
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Transaction"
+            android:layout_marginTop="16dp"/>
+
+
+    </LinearLayout>
+</ScrollView>

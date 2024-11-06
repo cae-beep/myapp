@@ -41,7 +41,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                 // Navigate to LoginActivity
                 Intent intent = new Intent(SplashScreenActivity.this, LoginActivity.class);
                 startActivity(intent);
-                finish(); // Optional: finish this activity to prevent going back
+                finish();
             }
         });
 
