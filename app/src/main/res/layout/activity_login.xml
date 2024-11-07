@@ -68,10 +68,11 @@
         android:layout_marginBottom="180dp">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="24dp"
+            android:layout_height="23dp"
             android:layout_gravity="center_vertical"
-            android:layout_marginEnd="12dp"/>
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_password" />
 
         <EditText
             android:id="@+id/password"
@@ -79,14 +80,15 @@
             android:layout_height="wrap_content"
             android:hint="PASSWORD"
             android:textColor="@color/black"
-            android:textColorHint="@color/black"            android:background="@android:color/transparent"
+            android:textColorHint="@color/black"
+            android:background="@android:color/transparent"
             android:inputType="textPassword"/>
     </LinearLayout>
 
     <!-- Login Button -->
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="LOGIN"
         android:textAllCaps="false"
@@ -95,8 +97,8 @@
         android:layout_marginBottom="12dp"
         android:padding="12dp"/>
 
-    <!-- Signup text -->
-    <Button
+    <!-- Signup text as clickable -->
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -104,5 +106,7 @@
         android:textColor="#000000"
         android:layout_gravity="center_horizontal"
         android:textSize="16sp"
-        android:layout_marginTop="12dp"/>
+        android:layout_marginTop="12dp"
+        android:clickable="true"
+        android:focusable="true"/>
 </LinearLayout>
