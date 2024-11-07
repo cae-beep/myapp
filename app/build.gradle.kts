@@ -39,11 +39,11 @@ android {
 }
 
 dependencies {
-    implementation(libs.appcompat)              // androidx.appcompat:appcompat
-    implementation(libs.material)               // com.google.android.material:material
-    implementation(libs.activity)               // androidx.activity:activity
-    implementation(libs.constraintlayout)       // androidx.constraintlayout:constraintlayout
-    testImplementation(libs.junit)              // junit:junit
-    androidTestImplementation(libs.ext.junit)   // androidx.test.ext:junit
-    androidTestImplementation(libs.espresso.core)  // androidx.test.espresso:espresso-core
+    implementation(libs.appcompat)
+    implementation(libs.material)
+    implementation(libs.activity)
+    implementation(libs.constraintlayout)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.ext.junit)
+    androidTestImplementation(libs.espresso.core)
 }
